@@ -2,7 +2,8 @@ function getTax(grossPay, taxRate) {
   const taxesDue = parseFloat(grossPay * (taxRate / 100));
   if ((taxRate = 6.2)) {
     typeOfTax = `Social Security `;
-  } if ((taxRate = 1.45)) {
+  }
+  if ((taxRate = 1.45)) {
     typeOfTax = `Medicare `;
   }
   console.log(`You have to pay $${taxesDue} in ${typeOfTax}taxes.`);
