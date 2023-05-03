@@ -11,8 +11,21 @@
     <main>
       <h1>PRACTICE WITH DATES</h1>
       <label for="date">Please Input the Date Below</label>
-      <p><input type="date" name="date" id="dateField" /></p>
+      <p><input type="date" name="myDate" id="myDate" /></p>
+      <button type="button" onclick="handleClick()">Display T&D</button>
+      <h3 id="messagePara"></h3>
     </main>
     <footer></footer>
+    <script>
+      function handleClick() {
+        let dateField = document.getElementById("myDate");
+        let dateValue = dateField.value;
+        let date = new Date(dateValue.toString());
+        
+        messagePara = document.getElementById("messagePara");
+        messagePara.innerText = `Current time and date is: 
+        ${date.toLocaleString()}`;
+      }
+    </script>
   </body>
 </html>
