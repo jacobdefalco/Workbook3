@@ -14,17 +14,23 @@
       <p><input type="date" name="myDate" id="myDate" /></p>
       <button type="button" onclick="handleClick()">Display T&D</button>
       <h3 id="messagePara"></h3>
+      <h3 id="messagePara2"></h3>
     </main>
     <footer></footer>
     <script>
       function handleClick() {
         let dateField = document.getElementById("myDate");
-        let dateValue = dateField.value;
-        let date = new Date(dateValue.toString());
-        
+        let dateValue = dateField.value + "T12:34:56";
+        let currentDate = new Date();
+        let selectedDate = new Date(dateValue);
+
         messagePara = document.getElementById("messagePara");
         messagePara.innerText = `Current time and date is: 
-        ${date.toLocaleString()}`;
+        ${currentDate.toLocaleString()}`;
+
+        messagePara2 = document.getElementById("messagePara2");
+        messagePara2.innerText = `The time and date you selected is: 
+        ${selectedDate.toLocaleString()}`;
       }
     </script>
   </body>
