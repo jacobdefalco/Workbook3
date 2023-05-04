@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hide And Show Pic Exercise</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+  </head>
+  <body>
+    <header></header>
+    <main class="container">
+      <label for="hideShowElement">Check to show and hide pic</label>
+      <input type="checkbox" name="" id="hideShowCheck" onclick="toggleElement()" checked />
+      <br />
+      <section id="picSection">
+        <img src="../hide-and-show/images/htph.png" alt="" id="htph" />
+      </section>
+    </main>
+    <footer></footer>
+    <script>
+      function toggleElement() {
+        const picture = document.getElementById("picSection");
+        const checkbox = document.getElementById("hideShowCheck");
+        if (hideShowCheck.checked) {
+          document.getElementById("picSection").style.display = "block";
+        } else {
+          document.getElementById("picSection").style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>
