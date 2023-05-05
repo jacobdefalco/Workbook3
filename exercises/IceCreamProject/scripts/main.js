@@ -15,8 +15,10 @@ function displayPrices() {
   let taxPara = document.getElementById("taxPara");
   let totalDuePara = document.getElementById("totalDuePara");
   let basePrice = 0;
-  let tax = basePrice * 0.07;
-  let totalDue = basePrice + tax;
+  let firstScoopPrice = 2.25;
+  let subsequentScoopPrice;
+  let numOfScoops = document.getElementById("numOfScoops").value;
+
 
   //grab topping options
   let sprinklesOption = document.getElementById("sprinklesOption");
@@ -38,8 +40,11 @@ function displayPrices() {
     basePrice += 0.25;
   }
 
-  //set values
+  //calculate
+  let tax = basePrice * 0.07;
+  let totalDue = basePrice + tax;
 
+  //set values
   basePricePara.innerText = `Base Price : $${basePrice.toFixed(2)}`;
   taxPara.innerText = `Tax : $${tax.toFixed(2)}`;
   totalDuePara.innerText = `Total Amount Due : $${totalDue.toFixed(2)}`;
