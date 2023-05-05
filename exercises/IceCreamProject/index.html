@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ice Cream Store</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body style="background-color: slategray">
+    <header></header>
+    <main class="container text-center" style="margin-top: 10%">
+      <form action="OrderForm"><h3>Ice Cream Order Sheet</h3></form>
+      <hr />
+      <div class="block" style="margin-top: 3%">
+        <label>Number Of Scoops</label>
+        <select name="scoops" id="numOfScoops">
+          <option value="Scoop1">1</option>
+          <option value="Scoop2">2</option>
+          <option value="Scoop3">3</option>
+        </select>
+      </div>
+      <div class="block" style="margin-top: 2%">
+        <input type="radio" name="iceCreamSize" id="sizeCone" value="cone" onclick="displayToppings()" />Cone
+        <input type="radio" name="iceCreamSize" id="sizeCup" value="cup" onclick="displayToppings()" />Cup
+      </div>
+      <div id="toppingSection" style="display: none">
+        Toppings
+        <div class="toppingOptions" style="border: 1px solid black">
+          <div style="display: block">
+            <input type="checkbox" name="toppingOptions" id="sprinklesOption" value="sprinkles" />
+            <label for="">Sprinkles ($.50)</label>
+            <input type="checkbox" name="toppingOptions" id="hotFudgeOption" value="hotFudge" />
+            <label for="">Hot Fudge ($1.25)</label>
+            <div style="display: block">
+              <input type="checkbox" name="toppingOptions" id="whippedCreamOption" value="whippedCream" />
+              <label for="">Whipped Cream ($.25)</label>
+              <input type="checkbox" name="toppingOptions" id="cherryOption" value="cherry" />
+              <label for="">Cherry ($.25)</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button onclick="displayPrices()">Submit Order</button>
+      <p id="basePricePara"></p>
+      <p id="taxPara"></p>
+      <p id="totalDuePara"></p>
+    </main>
+    <footer></footer>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
