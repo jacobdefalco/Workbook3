@@ -19,6 +19,13 @@ function displayPrices() {
   let subsequentScoopPrice;
   let numOfScoops = document.getElementById("numOfScoops").value;
 
+  //scoop calculation
+  if (numOfScoops == 1) {
+    basePrice += 2.25;
+  }
+  if (numOfScoops > 1) {
+    basePrice = 2.25 + numOfScoops * 1.25;
+  }
 
   //grab topping options
   let sprinklesOption = document.getElementById("sprinklesOption");
@@ -26,7 +33,7 @@ function displayPrices() {
   let whippedCreamOption = document.getElementById("whippedCreamOption");
   let cherryOption = document.getElementById("cherryOption");
 
-  //if checkboxes are checked
+  //if toppings are selected
   if (sprinklesOption.checked) {
     basePrice += 0.5;
   }
